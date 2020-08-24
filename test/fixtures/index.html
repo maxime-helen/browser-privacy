@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="application/javascript" src="/browser-privacy"></script>
+    <script type="application/javascript" src="/index.js"></script>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+      <fieldset>
+        <legend><code>document.cookie</code></legend>
+        <br>
+        <label>Current value: <samp id="cookie_value"></samp></label>
+        <br>
+        <div>
+          <input id="cookie_input_add_value" value="" placeholder="foo=1"></input>
+          <button id="cookie_add">Set</button>
+        </div>
+        <br>
+        <button id="cookie_clear">Clear</button>
+      </fieldset>
+      <fieldset>
+        <legend><code>window.storage</code></legend>
+        <br>
+        <label>Current value: <samp id="local_storage_value">""</samp></label>
+        <div id="local_storage_table"></div>
+        <br>
+         <div>
+          <input id="local_storage_get_item_key" value="" placeholder="key"></input>
+          <button id="local_storage_get_item">Get Item</button>
+          <label><samp id="local_storage_get_item_value">undefined</samp></label>
+        </div>
+        <br>
+        <div>
+          <input id="local_storage_add_item_key" value="" placeholder="key"></input>
+          <input id="local_storage_add_item_value" value="" placeholder="value"></input>
+          <button id="local_storage_add_item">Add Item</button>
+        </div>
+        <br>
+        <div>
+          <input id="local_storage_set_key" value="" placeholder="key"></input>
+          <input id="local_storage_set_value" value="" placeholder="value"></input>
+          <button id="local_storage_set">Set</button>
+        </div>
+        <br>
+        <div>
+          <input id="local_storage_remove_key" value="" placeholder="key"></input>
+          <button id="local_storage_remove">Remove Item</button>
+        </div>
+        <br>
+        <div>
+          <input id="local_storage_delete_key" value="" placeholder="key"></input>
+          <button id="local_storage_delete">Delete</button>
+        </div>
+        <br>
+        <div>
+          <input id="local_storage_get_key_index_value" value="" placeholder="index"></input>
+          <button id="local_storage_get_key">Get Key</button>
+          <label><samp id="local_storage_key_value">undefined</samp></label>
+        </div>
+        <br>
+        <div>
+          <button id="local_storage_clear">Clear</button>
+        </div>
+      </fieldset>
+      <div>
+        <fieldset>
+          <legend>xhr</legend>
+          <br>
+          <label>URL
+            <input id="xhr_url" value="" placeholder="https://blalba"></input>
+            <button id="xhr_request">GET</button>
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>fetch</legend>
+          <br>
+          <label>URL
+            <input id="fetch_url" value="" placeholder="https://balbalb"></input>
+            <button id="fetch_request">GET</button>
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>WebSocket</legend>
+          <br>
+          <label>URL
+            <input id="websocket_url" value="" placeholder="wss://balbalb"></input>
+            <button id="websocket_connect">Connect</button>
+          </label>
+        </fieldset>
+      </div>
+      <fieldset>
+        <legend><code>browser-privacy</code></legend>
+        <br>
+        <label>Cookie whitelist
+          <input id="browser_privacy_cookie_whitelist" value="" placeholder="[key1, key2]"></input>
+        </label>
+        <br>
+        <label>LocalStorage whitelist
+          <input id="browser_privacy_local_storage_whitelist" value="" placeholder="[key1, key2]"></input>
+        </label>
+        <br>
+        <label>Tracker categories
+          <input id="browser_privacy_trackers_categories" value="" placeholder="['Advertising', 'Analytics']"></input>
+        </label>
+        <br>
+        <label>Tracker companies
+          <input id="browser_privacy_trackers_companies" value="" placeholder="['Google', 'Amazon.com']"></input>
+        </label>
+        <br>
+        <div>
+        <label>Tracker hostnames
+          <input id="browser_privacy_trackers_hostnames" value="" placeholder="['google.analytics.com']"></input>
+        </label>
+        </div>
+        <br>
+        <div>
+          <button id="browser_privacy_start">Start</button>
+          <button id="browser_privacy_stop">Stop</button>
+        </div>
+      </fieldset>
+  </body>
+</html>
